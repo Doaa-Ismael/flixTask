@@ -27,8 +27,9 @@ const App = () => {
       </Row>
       <CardGroup>
          {movies.map( ({title, year, storyline, posterurl}) => (
+           <Row>
           <Card key={title}>
-            <Card.Img variant="top" src={posterurl} placeholder={'poster image'} />
+            <Card.Img variant="top" src={posterurl} placeholder={'poster image'} style={{maxHeight: '30rem', objectFit: 'contain'}} />
             <Card.Body>
               <Card.Title data-testid='title' >{title}</Card.Title>
               <Card.Text>
@@ -39,6 +40,7 @@ const App = () => {
               <small className="text-muted">{year}</small>
             </Card.Footer>
           </Card>
+             </Row>
         ))}
       </CardGroup>
     </Container>
