@@ -17,6 +17,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/movies', moviesRouter);
+app.get('/', (_, response) => response.send('Flix App Api'))
 
 
 // catch 404 and forward to error handler
